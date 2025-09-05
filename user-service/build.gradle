@@ -1,0 +1,12 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+dependencies {
+    implementation project(":order-service") // depends on order-service
+}
+
+application {
+    mainClass = 'com.example.user.UserApp'
+}
