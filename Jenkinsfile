@@ -20,19 +20,19 @@ pipeline {
         stage('Build') {
             steps {
                 // Use Gradle wrapper to ensure version consistency (Gradle 8.8)
-                bat './gradlew clean build --no-daemon --warning-mode all'
+                bat 'gradlew clean build --no-daemon --warning-mode all'
             }
         }
 
         stage('Test') {
             steps {
-                bat './gradlew test --no-daemon'
+                bat 'gradlew test --no-daemon'
             }
         }
 
         stage('Run User Service') {
             steps {
-                bat './gradlew :user-service:run --no-daemon'
+                bat 'gradlew :user-service:run --no-daemon'
             }
         }
 
