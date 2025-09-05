@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     tools {
+        gradle 'GRADLE_HOME'
         jdk 'JAVA_HOME'   // Use the JDK you configured in Jenkins (e.g., JDK 17+)
     }
 
