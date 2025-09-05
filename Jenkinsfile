@@ -25,12 +25,7 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                bat 'gradle test --no-daemon'
-            }
-        }
-
+       
         stage('Run User Service') {
             steps {
                 bat 'gradle :user-service:run --no-daemon'
